@@ -1,0 +1,34 @@
+{
+  "spam": {
+    "type": "noul",
+    "instructions": "Is this YouTube comment spam?"
+  },
+  "contact": {
+    "type": "noul",
+    "instructions": "Does it tell people to contact someone off YouTube?"
+  },
+  "money": {
+    "type": "noul",
+    "instructions": "Does it talk about money, investing or crypto?"
+  },
+  "link": {
+    "type": "noul",
+    "instructions": "Does it push the reader to a link or profile?"
+  },
+  "wants": {
+    "type": "choice",
+    "instructions": "What does this commenter want?",
+    "criteria": {
+      "ask a question": "Ask a real question about the video",
+      "request a video": "Ask for a future video",
+      "say thanks": "Thank the creator",
+      "give feedback": "Give feedback about the video",
+      "promote something": "Get people to buy, visit or contact"
+    }
+  },
+  "positive": {
+    "type": "score",
+    "instructions": "How positive is it?",
+    "criteria": ["Negative", "Neutral", "Positive"]
+  }
+}

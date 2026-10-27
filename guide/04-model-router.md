@@ -8,16 +8,10 @@ The router from the video. Every AI request doesn't need the biggest, most expen
 
 ## How it works
 
-```mermaid
-flowchart LR
-    req["Your request"] --> jev["Jev<br/><i>small, medium or large?</i>"]
-    jev --> code{"Your code<br/><i>sure enough?</i>"}
-    code -- "yes" --> pick["Send to the model Jev picked"]
-    code -- "under 0.6" --> up["Play it safe:<br/>go one size bigger"]
-    pick --> or["OpenRouter"]
-    up --> or
-    or --> ans["Answer"]
-```
+1. Your request comes in.
+2. **Jev** answers one question: does this need a small, medium or large model?
+3. **Your code** checks how sure Jev is. Under 0.6, it plays it safe and goes one size bigger.
+4. The request goes to that model through **OpenRouter**, and you get the answer.
 
 The question Jev gets is a **choice** with three options, each described in plain words:
 
